@@ -1,0 +1,133 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(30deg,#a787d3,#333333);
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: #7b547b;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(168, 62, 62, 0.2);
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  color: #121212;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #333333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #572f56;
+}
+
+button {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+}
+        
+          button {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+          }
+
+          button:before {
+            content: "";
+            background: linear-gradient(
+              45deg,
+              #220c20,
+              #f36dd6,
+              #3c0430,
+              #ec6dd1,
+              #3c0430,
+              #eb69cf
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+          }
+
+          @keyframes glowing-button-85 {
+            0% {
+              background-position: 0 0;
+            }
+            50% {
+              background-position: 400% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+          }
+
+          button:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+          }
+
+.hidden {
+  display: none;
+}
